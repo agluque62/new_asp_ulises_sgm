@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sacta", "Dlls\Sacta\Sacta.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincroCD30", "Dlls\SincroCD30\SincroCD30.csproj", "{D26A125D-D781-4487-929B-4DB85DAFAED9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlisesWebConfig", "UlisesWebConfig\UlisesWebConfig.csproj", "{EFEB5BA1-74A9-4AF6-A88C-083F1ED9D3F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlisesWebConfig.Tests", "UlisesWebConfig.Tests\UlisesWebConfig.Tests.csproj", "{93F30B25-3DF6-4915-80AA-CE10A5089E4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,14 @@ Global
 		{D26A125D-D781-4487-929B-4DB85DAFAED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D26A125D-D781-4487-929B-4DB85DAFAED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D26A125D-D781-4487-929B-4DB85DAFAED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFEB5BA1-74A9-4AF6-A88C-083F1ED9D3F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFEB5BA1-74A9-4AF6-A88C-083F1ED9D3F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFEB5BA1-74A9-4AF6-A88C-083F1ED9D3F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFEB5BA1-74A9-4AF6-A88C-083F1ED9D3F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93F30B25-3DF6-4915-80AA-CE10A5089E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93F30B25-3DF6-4915-80AA-CE10A5089E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93F30B25-3DF6-4915-80AA-CE10A5089E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93F30B25-3DF6-4915-80AA-CE10A5089E4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
