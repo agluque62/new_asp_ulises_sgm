@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7308C25D-A729-4E56-88DC-3E9F60B2C9C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CD40.BD</RootNamespace>
+    <AssemblyName>BDCD40</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MySql.Data.6.7.9\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntidadesSICCIP\Tipos.cs" />
+    <Compile Include="Entidades\agenda.cs" />
+    <Compile Include="Entidades\Agrupaciones.cs" />
+    <Compile Include="Entidades\Alarmas.cs" />
+    <Compile Include="Entidades\Altavoces.cs" />
+    <Compile Include="Entidades\Destinos.cs" />
+    <Compile Include="Entidades\DestinosExternos.cs" />
+    <Compile Include="Entidades\DestinosExternosSector.cs" />
+    <Compile Include="Entidades\DestinosInternos.cs" />
+    <Compile Include="Entidades\DestinosInternosSector.cs" />
+    <Compile Include="Entidades\DestinosRadio.cs" />
+    <Compile Include="Entidades\DestinosRadioSector.cs" />
+    <Compile Include="Entidades\DestinosTelefonia.cs" />
+    <Compile Include="Entidades\Emplazamientos.cs" />
+    <Compile Include="Entidades\Encaminamientos.cs" />
+    <Compile Include="Entidades\EquiposEU.cs" />
+    <Compile Include="Entidades\EstadoAltavoces.cs" />
+    <Compile Include="Entidades\EstadoRecursos.cs" />
+    <Compile Include="Entidades\EstadosRecursos.cs" />
+    <Compile Include="Entidades\Externos.cs" />
+    <Compile Include="Entidades\GruposTelefonia.cs" />
+    <Compile Include="Entidades\HF.cs" />
+    <Compile Include="Entidades\HistoricoIncidencias.cs" />
+    <Compile Include="Entidades\Incidencias.cs" />
+    <Compile Include="Entidades\Internos.cs" />
+    <Compile Include="Entidades\MetodosBss.cs" />
+    <Compile Include="Entidades\MetodosbssDestinosradio.cs" />
+    <Compile Include="Entidades\Niveles.cs" />
+    <Compile Include="Entidades\NivelesSCV.cs" />
+    <Compile Include="Entidades\Nucleos.cs" />
+    <Compile Include="Entidades\Operadores.cs" />
+    <Compile Include="Entidades\ParametrosLCENSCV.cs" />
+    <Compile Include="Entidades\ParametrosRDSCV.cs" />
+    <Compile Include="Entidades\ParametrosRecursoGeneral.cs" />
+    <Compile Include="Entidades\ParametrosRecursoLCEN.cs" />
+    <Compile Include="Entidades\ParametrosRecursoRadio.cs" />
+    <Compile Include="Entidades\ParametrosRecursoRadioKASiccip.cs" />
+    <Compile Include="Entidades\ParametrosRecursoTelefonia.cs" />
+    <Compile Include="Entidades\ParametrosSector.cs" />
+    <Compile Include="Entidades\ParametrosSectorRecording.cs" />
+    <Compile Include="Entidades\ParametrosSectorSCV.cs" />
+    <Compile Include="Entidades\ParametrosTFSCV.cs" />
+    <Compile Include="Entidades\PermisosRedes.cs" />
+    <Compile Include="Entidades\PermisosRedesSCV.cs" />
+    <Compile Include="Entidades\Prefijos.cs" />
+    <Compile Include="Entidades\RadioParam.cs" />
+    <Compile Include="Entidades\RecursosDatos.cs" />
+    <Compile Include="Entidades\RecursosRadio.cs" />
+    <Compile Include="Entidades\Tabla_bss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entidades\tabla_bss_recurso.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entidades\ValoresTabla.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entidades\Zonas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GestorBaseDatos.cs" />
+    <Compile Include="Procedimientos.cs" />
+    <Compile Include="Entidades\Radio.cs" />
+    <Compile Include="Entidades\Rangos.cs" />
+    <Compile Include="Entidades\RangosSCV.cs" />
+    <Compile Include="Entidades\Recursos.cs" />
+    <Compile Include="Entidades\RecursosLCEN.cs" />
+    <Compile Include="Entidades\RecursosSCV.cs" />
+    <Compile Include="Entidades\RecursosTF.cs" />
+    <Compile Include="Entidades\Redes.cs" />
+    <Compile Include="Entidades\Rutas.cs" />
+    <Compile Include="Entidades\Sectores.cs" />
+    <Compile Include="Entidades\SectoresAgrupacion.cs" />
+    <Compile Include="Entidades\SectoresSCV.cs" />
+    <Compile Include="Entidades\SectoresSector.cs" />
+    <Compile Include="Entidades\SectoresSectorizacion.cs" />
+    <Compile Include="Entidades\Sectorizaciones.cs" />
+    <Compile Include="Entidades\Sistema.cs" />
+    <Compile Include="Entidades\Tablas.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entidades\TeclasSector.cs" />
+    <Compile Include="Entidades\TeclasSectorSCV.cs" />
+    <Compile Include="Entidades\TifX.cs" />
+    <Compile Include="Entidades\Tipos.cs" />
+    <Compile Include="Entidades\Top.cs" />
+    <Compile Include="Entidades\Troncales.cs" />
+    <Compile Include="Entidades\TroncalesRuta.cs" />
+    <Compile Include="Entidades\UsuariosAbonados.cs" />
+    <Compile Include="Entidades\ParametrosRecursosRadioKeepAlive.cs" />
+    <Compile Include="Entidades\ParametrosSectorSCVKeepAlive.cs" />
+    <Compile Include="Utilidades.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sectorizacion\Sectorizacion.csproj">
+      <Project>{9AA917DF-52EA-4F8F-961A-2B7D9A7764BD}</Project>
+      <Name>Sectorizacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\UtilitiesCD40.csproj">
+      <Project>{d9d5b865-733e-4fc9-9a1d-8319e1380ade}</Project>
+      <Name>UtilitiesCD40</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
