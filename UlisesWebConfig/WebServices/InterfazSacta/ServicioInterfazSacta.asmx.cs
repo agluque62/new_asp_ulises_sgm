@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 using Sacta;
 using CD40.BD;
 
-using UtilitiesCD40;
+using Utilities;
 
 namespace UlisesWebConfig.WebServices.InterfazSacta
 {
@@ -70,7 +70,7 @@ namespace UlisesWebConfig.WebServices.InterfazSacta
                 {
                     sModule = new Sacta.SactaModule(Sistema, Connection);
                     sModule.SactaActivityChanged += 
-                        new Utilities.GenericEventHandler<Dictionary<string, object>>(sModule_SactaActivityChanged);
+                        new Sacta.Utilities.GenericEventHandler<Dictionary<string, object>>(sModule_SactaActivityChanged);
                 }
                 return sModule;
             }
@@ -119,7 +119,7 @@ namespace UlisesWebConfig.WebServices.InterfazSacta
         {
             var info = new SactaInfo();
             var FechaActivacion = DateTime.Now;
-            var util = new Utilidades(MySqlConnectionToCd40);
+            var util = new CD40.BD.Utilidades(MySqlConnectionToCd40);
             int Result = 0;
             string Cause = default(string);
             object sectorizacion = null;

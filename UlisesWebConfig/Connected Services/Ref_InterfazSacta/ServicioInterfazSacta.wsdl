@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetEstadoSacta">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEstadoSactaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetEstadoSactaResult" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartSacta">
+        <s:complexType />
+      </s:element>
+      <s:element name="StartSactaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EndSacta">
+        <s:complexType />
+      </s:element>
+      <s:element name="EndSactaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SactaConfGet">
+        <s:complexType />
+      </s:element>
+      <s:element name="SactaConfGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SactaConfGetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SactaConfSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jcfg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SactaConfSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SactaConfSetResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SectorizeFromSacta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Version" type="s:unsignedInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataSect" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SectorizeFromSactaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SectorizeFromSactaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEstadoSactaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEstadoSacta" />
+  </wsdl:message>
+  <wsdl:message name="GetEstadoSactaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEstadoSactaResponse" />
+  </wsdl:message>
+  <wsdl:message name="StartSactaSoapIn">
+    <wsdl:part name="parameters" element="tns:StartSacta" />
+  </wsdl:message>
+  <wsdl:message name="StartSactaSoapOut">
+    <wsdl:part name="parameters" element="tns:StartSactaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EndSactaSoapIn">
+    <wsdl:part name="parameters" element="tns:EndSacta" />
+  </wsdl:message>
+  <wsdl:message name="EndSactaSoapOut">
+    <wsdl:part name="parameters" element="tns:EndSactaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SactaConfGetSoapIn">
+    <wsdl:part name="parameters" element="tns:SactaConfGet" />
+  </wsdl:message>
+  <wsdl:message name="SactaConfGetSoapOut">
+    <wsdl:part name="parameters" element="tns:SactaConfGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SactaConfSetSoapIn">
+    <wsdl:part name="parameters" element="tns:SactaConfSet" />
+  </wsdl:message>
+  <wsdl:message name="SactaConfSetSoapOut">
+    <wsdl:part name="parameters" element="tns:SactaConfSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SectorizeFromSactaSoapIn">
+    <wsdl:part name="parameters" element="tns:SectorizeFromSacta" />
+  </wsdl:message>
+  <wsdl:message name="SectorizeFromSactaSoapOut">
+    <wsdl:part name="parameters" element="tns:SectorizeFromSactaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioInterfazSactaSoap">
+    <wsdl:operation name="GetEstadoSacta">
+      <wsdl:input message="tns:GetEstadoSactaSoapIn" />
+      <wsdl:output message="tns:GetEstadoSactaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StartSacta">
+      <wsdl:input message="tns:StartSactaSoapIn" />
+      <wsdl:output message="tns:StartSactaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EndSacta">
+      <wsdl:input message="tns:EndSactaSoapIn" />
+      <wsdl:output message="tns:EndSactaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SactaConfGet">
+      <wsdl:input message="tns:SactaConfGetSoapIn" />
+      <wsdl:output message="tns:SactaConfGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SactaConfSet">
+      <wsdl:input message="tns:SactaConfSetSoapIn" />
+      <wsdl:output message="tns:SactaConfSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SectorizeFromSacta">
+      <wsdl:input message="tns:SectorizeFromSactaSoapIn" />
+      <wsdl:output message="tns:SectorizeFromSactaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioInterfazSactaSoap" type="tns:ServicioInterfazSactaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEstadoSacta">
+      <soap:operation soapAction="http://tempuri.org/GetEstadoSacta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartSacta">
+      <soap:operation soapAction="http://tempuri.org/StartSacta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndSacta">
+      <soap:operation soapAction="http://tempuri.org/EndSacta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SactaConfGet">
+      <soap:operation soapAction="http://tempuri.org/SactaConfGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SactaConfSet">
+      <soap:operation soapAction="http://tempuri.org/SactaConfSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SectorizeFromSacta">
+      <soap:operation soapAction="http://tempuri.org/SectorizeFromSacta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioInterfazSactaSoap12" type="tns:ServicioInterfazSactaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEstadoSacta">
+      <soap12:operation soapAction="http://tempuri.org/GetEstadoSacta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartSacta">
+      <soap12:operation soapAction="http://tempuri.org/StartSacta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndSacta">
+      <soap12:operation soapAction="http://tempuri.org/EndSacta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SactaConfGet">
+      <soap12:operation soapAction="http://tempuri.org/SactaConfGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SactaConfSet">
+      <soap12:operation soapAction="http://tempuri.org/SactaConfSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SectorizeFromSacta">
+      <soap12:operation soapAction="http://tempuri.org/SectorizeFromSacta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioInterfazSacta">
+    <wsdl:port name="ServicioInterfazSactaSoap" binding="tns:ServicioInterfazSactaSoap">
+      <soap:address location="https://localhost:44310/WebServices/InterfazSacta/ServicioInterfazSacta.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioInterfazSactaSoap12" binding="tns:ServicioInterfazSactaSoap12">
+      <soap12:address location="https://localhost:44310/WebServices/InterfazSacta/ServicioInterfazSacta.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

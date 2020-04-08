@@ -241,7 +241,7 @@ namespace UlisesWebConfig.WebServices.InterfazSOAPConfiguracion
         private void DamePlanNumeracionATS(string id_sistema)
         {
             //Procedimientos pr = new Procedimientos();
-            Utilidades ut = new Utilidades(GestorBDCD40.ConexionMySql);
+            var ut = new CD40.BD.Utilidades(GestorBDCD40.ConexionMySql);
 
             ushort j = 0;
             Encaminamientos e = new Encaminamientos();
@@ -678,7 +678,7 @@ namespace UlisesWebConfig.WebServices.InterfazSOAPConfiguracion
                 if (string.IsNullOrEmpty(id_sistema) && string.IsNullOrEmpty(id_usuario))
                     return null;
 
-                Utilidades ut = new Utilidades(GestorBDCD40.ConexionMySql);
+                var ut = new CD40.BD.Utilidades(GestorBDCD40.ConexionMySql);
                 string strUltimoEnlace = string.Empty;
                 string strUltimoAlias = string.Empty;
                 int numEnlaceDistinto = 0;
@@ -1260,7 +1260,7 @@ namespace UlisesWebConfig.WebServices.InterfazSOAPConfiguracion
         {
             lock (Sync)
             {
-                Utilidades ut = new Utilidades(GestorBDCD40.ConexionMySql);
+                var ut = new CD40.BD.Utilidades(GestorBDCD40.ConexionMySql);
                 //Procedimientos pr = new Procedimientos();
                 #region Lista Número de Abonados
                 DataSet listaNumerosInternos = Procedimientos.NumerosAbonadoInternos(GestorBDCD40.ConexionMySql, id_sistema, id_usuario);
