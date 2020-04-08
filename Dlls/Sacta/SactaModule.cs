@@ -21,6 +21,8 @@ using System.Data;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
+using Sacta.Utilities;
+
 namespace SactaSectionHandler
 {
 
@@ -497,7 +499,7 @@ namespace Sacta
 #endif
         /**************************************************/
 
-        public event GenericEventHandler<Dictionary<string, object>> SactaActivityChanged;
+        public event Sacta.Utilities.GenericEventHandler<Dictionary<string, object>> SactaActivityChanged;
 
         #region Declaración de atributos
         enum SactaState { WaitingSactaActivity, /*WaitingIOLActivity,*/ WaitingSectorization, WaitingSectFinish, SendingPresences, Stopped }

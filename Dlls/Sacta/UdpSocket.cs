@@ -4,7 +4,7 @@ using System.Net.Sockets;
 using System.Collections.Generic;
 using NLog;
 
-namespace Utilities
+namespace Sacta.Utilities
 {
     public struct DataGram
     {
@@ -16,7 +16,7 @@ namespace Utilities
     {
         #region Public
 
-        public event GenericEventHandler<DataGram> NewDataEvent;
+        public event Sacta.Utilities.GenericEventHandler<DataGram> NewDataEvent;
 
         public UdpClient Base
         {

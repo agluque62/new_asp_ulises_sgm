@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using System.Runtime.Remoting.Messaging;
 
-namespace Utilities
+namespace Sacta.Utilities
 {
    public delegate void GenericEventHandler<T>(object sender, T msg);
 
