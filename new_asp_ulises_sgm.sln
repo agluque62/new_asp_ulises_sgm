@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlisesWebConfig", "UlisesWe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlisesWebConfig.Tests", "UlisesWebConfig.Tests\UlisesWebConfig.Tests.csproj", "{93F30B25-3DF6-4915-80AA-CE10A5089E4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClusterLib", "Dlls\ClusterLib\ClusterLib.csproj", "{F4A852F5-4DA4-4B99-A1D3-C881D12E8488}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{93F30B25-3DF6-4915-80AA-CE10A5089E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93F30B25-3DF6-4915-80AA-CE10A5089E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93F30B25-3DF6-4915-80AA-CE10A5089E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4A852F5-4DA4-4B99-A1D3-C881D12E8488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A852F5-4DA4-4B99-A1D3-C881D12E8488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A852F5-4DA4-4B99-A1D3-C881D12E8488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A852F5-4DA4-4B99-A1D3-C881D12E8488}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{9AA917DF-52EA-4F8F-961A-2B7D9A7764BD} = {139DD9DC-4F6D-4643-9BD1-6B7C7D8F2D30}
 		{FA8E0DE8-6EA5-4C83-A5C5-63A413A3BFD4} = {139DD9DC-4F6D-4643-9BD1-6B7C7D8F2D30}
 		{D26A125D-D781-4487-929B-4DB85DAFAED9} = {139DD9DC-4F6D-4643-9BD1-6B7C7D8F2D30}
+		{F4A852F5-4DA4-4B99-A1D3-C881D12E8488} = {139DD9DC-4F6D-4643-9BD1-6B7C7D8F2D30}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {03827B57-FC9C-44F9-BFAF-48A3C398B280}

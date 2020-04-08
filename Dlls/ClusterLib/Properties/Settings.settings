@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ClusterLib.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CadenaConexion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server=localhost;Database=cd40;Uid=root;Pwd=U5K-G;</Value>
+    </Setting>
+    <Setting Name="Sistema" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">departamento</Value>
+    </Setting>
+    <Setting Name="Idioma" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">es</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
