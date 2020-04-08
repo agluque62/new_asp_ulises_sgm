@@ -75,11 +75,16 @@
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="WebServices\InterfazSacta\ServicioInterfazSacta.asmx" />
+    <Content Include="WebServices\SincronizaCD30\SincronizaCD30.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebServices\InterfazSacta\ServicioInterfazSacta.asmx.cs">
       <DependentUpon>ServicioInterfazSacta.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\SincronizaCD30\SincronizaCD30.asmx.cs">
+      <DependentUpon>SincronizaCD30.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
@@ -104,6 +109,10 @@
     <ProjectReference Include="..\Dlls\Sectorizacion\Sectorizacion.csproj">
       <Project>{9aa917df-52ea-4f8f-961a-2b7d9a7764bd}</Project>
       <Name>Sectorizacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dlls\SincroCD30\SincroCD30.csproj">
+      <Project>{d26a125d-d781-4487-929b-4db85dafaed9}</Project>
+      <Name>SincroCD30</Name>
     </ProjectReference>
     <ProjectReference Include="..\Dlls\Utilities\UtilitiesCD40.csproj">
       <Project>{d9d5b865-733e-4fc9-9a1d-8319e1380ade}</Project>
