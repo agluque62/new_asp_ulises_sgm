@@ -75,12 +75,18 @@
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="WebServices\InterfazSacta\ServicioInterfazSacta.asmx" />
+    <Content Include="WebServices\InterfazSOAPConfiguracion\InterfazSOAPConfiguracion.asmx" />
     <Content Include="WebServices\SincronizaCD30\SincronizaCD30.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebServices\InterfazSacta\ServicioInterfazSacta.asmx.cs">
       <DependentUpon>ServicioInterfazSacta.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\InterfazSOAPConfiguracion\ConfiguracionElementosHw.cs" />
+    <Compile Include="WebServices\InterfazSOAPConfiguracion\InterfazSOAPConfiguracion.asmx.cs">
+      <DependentUpon>InterfazSOAPConfiguracion.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WebServices\SincronizaCD30\SincronizaCD30.asmx.cs">
